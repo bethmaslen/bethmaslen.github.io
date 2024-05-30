@@ -100,14 +100,15 @@ input {
 iframe {
     width: 100%;
     /* Sets the iframe width to 100% */
-    height: 80vh;
+    height: 90vh ;
     /* Sets the iframe height to 80% of the viewport height */
     border: none;
     /* Removes the border */
-    margin-top: 200px;
+    margin-top: 50px;
     /* Adds top margin to make space for the floating frame */
     box-sizing: border-box;
     /* Ensures padding is included in the element's total width */
+    overflow: hidden;
 }
 
 /* Additional styling to ensure the content fits well */
@@ -144,6 +145,7 @@ iframe {
     box-sizing: border-box;
     height: 100%;
     overflow-y: auto;
+    overflow: hidden;
 }
 
 .content-body img {
