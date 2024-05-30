@@ -6,7 +6,7 @@ body {
     /* Sets the maximum width of the body content */
     color: #000000;
     /* Sets the text color */
-    line-height: 2rem;
+    line-height: 1.5rem;
     /* Sets the line height for better readability */
     font-family: 'Times New Roman', Times, serif;
     /* Sets the font family */
@@ -24,9 +24,9 @@ body {
 h1 {
     font-weight: bold;
     /* Sets the font weight to bold */
-    font-size: 1.2rem;
+    font-size: 1rem;
     /* Sets the font size */
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
     /* Adds a margin at the top */
 }
 
@@ -34,14 +34,16 @@ h1 {
 hr {
     margin-top: 2em;
     /* Adds a margin at the top */
+    margin-bottom: 2em;
+    margin-left: 0
+    ;
     border: none;
     /* Removes the default border */
     background-color: #000000;
     /* Sets the background color */
-    color: #ffffff;
-    /* Sets the text color */
     height: 1.5px;
     /* Sets the height of the hr element */
+    max-width: 220px;
 }
 
 /* Style for a elements */
@@ -80,13 +82,17 @@ input {
 .floating-frame {
     position: fixed;
     /* Fixes the position relative to the viewport */
-    left: 0;
+    left: 40px;
     /* Aligns the frame to the left of the viewport */
     top: 0px;
     /* Sets the frame at the top of the viewport */
-    width: 100%;
+    margin: 40px auto;
+    /* Centers the body content and adds margin at the top and bottom */
+        
+
+    width: 80%;
     /* Sets the width of the frame to 100% of the viewport */
-    padding: 20px;
+    padding: 0 20px;
     /* Adds padding inside the frame */
     background-color: rgba(255, 255, 255, 0);
     /* Sets a fully transparent background */
@@ -104,7 +110,7 @@ iframe {
     /* Sets the iframe height to 80% of the viewport height */
     border: none;
     /* Removes the border */
-    margin-top: 50px;
+    margin-top: 20px;
     /* Adds top margin to make space for the floating frame */
     box-sizing: border-box;
     /* Ensures padding is included in the element's total width */
@@ -154,4 +160,8 @@ iframe {
     object-fit: cover;
     flex: 1 1 calc(33.333% - 20px);
     /* 3 images per row with gaps */
+}
+
+.content-body p i {
+    font-style: italic;
 }
