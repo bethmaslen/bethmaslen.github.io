@@ -146,7 +146,7 @@ iframe {
   height: auto;
   object-fit: cover;
   flex: 1 1 calc(33.333% - 20px);
-  margin: 0.5rem 0 0.5rem;
+  
 }
 
 .content-body p i {
