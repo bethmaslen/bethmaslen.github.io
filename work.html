@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Beth Maslen - Work</title>
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="/bm-fav.ico">
+</head>
+
+<body>
+  <div class="floating-frame">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger-icon" aria-controls="menu" aria-expanded="false">&#9776;</label>
+    <nav class="menu" role="navigation" aria-label="Work Navigation">
+      <ul>
+        <li><a href="index.html">back</a></li>
+        <li>
+          <a href="work/maternal-figures.html" target="content-frame">Maternal figures</a>
+        </li>
+        <li>
+          <a href="work/making-sure.html" target="content-frame">Making sure</a>
+        </li>
+        <li>
+          <a href="work/500-roses.html" target="content-frame">500 roses in 400 metres</a>
+        </li>
+        <li>
+          <a href="work/moth-lamps.html" target="content-frame">Moth lamps</a>
+        </li>
+        <li><a href="work/two.html" target="content-frame">Two</a></li>
+        <li>
+          <a href="work/practice.html" target="content-frame">Practice</a>
+        </li>
+        <li>
+          <a href="work/spelling.html" target="content-frame">Spelling</a>
+        </li>
+        <li>
+          <a href="work/saturn-is.html" target="content-frame">Saturn is so beautiful</a>
+        </li>
+        <li>
+          <a href="work/i-i-i.html" target="content-frame">I,I,I believe in you</a>
+        </li>
+        <li>
+          <a href="work/come-with.html" target="content-frame">Come with me</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <iframe id="content-frame" name="content-frame" src="" frameborder="0"></iframe>
+
+  <script>
+    const menu = document.querySelector(".menu");
+    const hamburgerIcon = document.querySelector(".hamburger-icon");
+    const contentFrame = document.getElementById("content-frame");
+
+    // Add an event listener to all links within the menu
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.style.display = "none";
+        document.getElementById("menu-toggle").checked = false;
+      });
+    });
+
+    // Add an event listener to the hamburger icon
+    hamburgerIcon.addEventListener("click", () => {
+      // Toggle the menu's visibility
+      menu.style.display = menu.style.display === "none" ? "block" : "none";
+    });
+
+    // Add an event listener to the content frame
+    contentFrame.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent the click from bubbling up
+    });
+  </script>
+</body>
+
+</html>
