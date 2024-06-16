@@ -13,7 +13,7 @@
 <body>
   <div class="floating-frame">
     <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="hamburger-icon" aria-controls="menu" aria-expanded="false">&#9776;</label>
+    <label for="menu-toggle" class="hamburger-icon" aria-controls="menu" aria-expanded="false">&#8801;</label>
     <nav class="menu" role="navigation" aria-label="Work Navigation">
       <ul>
         <li><a href="index.html">back</a></li>
@@ -40,7 +40,7 @@
           <a href="work/saturn-is.html" target="content-frame">Saturn is so beautiful</a>
         </li>
         <li>
-          <a href="work/i-i-i.html" target="content-frame">I,I,I believe in you</a>
+          <a href="work/i-i-i.html" target="content-frame">I, I, I believe in you</a>
         </li>
         <li>
           <a href="work/come-with.html" target="content-frame">Come with me</a>
@@ -56,7 +56,7 @@
     const hamburgerIcon = document.querySelector(".hamburger-icon");
     const contentFrame = document.getElementById("content-frame");
 
-    // Add an event listener to all links within the menu
+    // event listener to all links within the menu
     menu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         menu.style.display = "none";
@@ -64,15 +64,15 @@
       });
     });
 
-    // Add an event listener to the hamburger icon
+    // event listener to the hamburger icon
     hamburgerIcon.addEventListener("click", () => {
-      // Toggle the menu's visibility
+      // toggle menu visibility
       menu.style.display = menu.style.display === "none" ? "block" : "none";
     });
 
-    // Add an event listener to the content frame
+    // event listener to the content frame
     contentFrame.addEventListener("click", (event) => {
-      event.stopPropagation(); // Prevent the click from bubbling up
+      event.stopPropagation(); // prevent the click from bubbling up
     });
   </script>
 </body>
