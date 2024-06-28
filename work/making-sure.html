@@ -27,12 +27,18 @@
 
       <p class="subtext">Documentation by Christian Capurro</p>
           
-      <p>
-        <a href="bethmaslen.github.io/work">back</a>
-      </p>
+    <p>
+      <a href="#" id="reset-link">back</a>
+    </p>
     
-    </div>
+  </div>
 
-
+  <script>
+    document.getElementById('reset-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      parent.document.getElementById('content-frame').src = '';
+      parent.document.querySelector('.menu').style.display = 'block';
+    });
+  </script>
   </body>
 </html>

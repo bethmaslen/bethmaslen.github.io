@@ -67,9 +67,19 @@
     <hr class="work-hr" />
 
     <p>
-      <a href="bethmaslen.github.io/work">work</a>
+      <a href="#" id="reset-link">work</a>
     </p>
+    
   </div>
+
+  <script>
+    document.getElementById('reset-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      parent.document.getElementById('content-frame').src = '';
+      parent.document.querySelector('.menu').style.display = 'block';
+    });
+  </script>
+    
 </body>
 
 </html>
