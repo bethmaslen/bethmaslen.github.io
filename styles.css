@@ -122,7 +122,7 @@ input {
 
 iframe {
   width: 100%;
-  height: calc(90vh - 20px); /* Adjust height to accommodate the margin-top */
+  height: calc(90dvh - 40px); /* Adjust height to accommodate the margin-top */
   border: none;
   margin-top: 40px;
   box-sizing: border-box;
@@ -139,7 +139,7 @@ iframe {
   gap: 10px;
   padding: 10px;
   box-sizing: border-box;
-  height: calc(100% - 20px - env(safe-area-inset-bottom)); /* Adjust height to avoid overflow */
+  height: calc(100% - 40px - env(safe-area-inset-bottom)); /* Adjust height to avoid overflow */
   overflow-y: auto;
   margin-bottom: calc(40px + env(safe-area-inset-bottom)); /* Add margin to bottom */
 }
