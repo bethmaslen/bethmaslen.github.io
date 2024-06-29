@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Come with me</title>
-    <meta name="robots" content="noindex" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
 
-  <body class="body-work">
-    <div class="content-body">
-      <img src="assets/come-with/9565.jpg" alt="" />
-      <img src="assets/come-with/9583.jpg" alt="" />
-      <img src="assets/come-with/9592.jpg" alt="" />
+<head>
+  <meta charset="utf-8" />
+  <title>Come with me</title>
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
 
-      <hr class="work-hr" />
+<body class="body-work">
+  <div class="content-body">
+    <img src="assets/come-with/9565.jpg" alt="" />
+    <img src="assets/come-with/9583.jpg" alt="" />
+    <img src="assets/come-with/9592.jpg" alt="" />
 
-      <p>Accompanied by a short story written by Emma Nixon</p>
+    <hr class="work-hr" />
 
-      <hr class="work-hr" />
-    </div>
-  </body>
+    <p>Accompanied by a short story written by Emma Nixon</p>
+
+    <hr class="work-hr" />
+
+    <p>
+      <a href="#" id="reset-link">
+        << </a>
+    </p>
+
+  </div>
+
+  <script>
+    document.getElementById('reset-link').addEventListener('click', function (event) {
+      event.preventDefault();
+      parent.document.getElementById('content-frame').src = '';
+      parent.document.querySelector('.menu').style.display = 'block';
+    });
+  </script>
+
+  </div>
+</body>
+
 </html>

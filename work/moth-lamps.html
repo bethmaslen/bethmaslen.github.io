@@ -24,8 +24,21 @@
         <hr class="work-hr" />
         <p>Outdoor structures that serve somewhat as a way to deter moths</p>
         <hr class="work-hr" />
-        
-        <p class="subtext">Documentation by Oscar Capezio</p>
+
+        <p>
+            <a href="#" id="reset-link">
+                << </a>
+        </p>
+
+    </div>
+
+    <script>
+        document.getElementById('reset-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            parent.document.getElementById('content-frame').src = '';
+            parent.document.querySelector('.menu').style.display = 'block';
+        });
+    </script>
     </div>
 </body>
 

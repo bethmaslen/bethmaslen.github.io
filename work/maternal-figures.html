@@ -62,19 +62,20 @@
     <hr class="work-hr" />
 
     <p>
-      <a href="#" id="reset-link"><<</a>
+      <a href="#" id="reset-link">
+        << </a>
     </p>
-    
+
   </div>
 
   <script>
-    document.getElementById('reset-link').addEventListener('click', function(event) {
+    document.getElementById('reset-link').addEventListener('click', function (event) {
       event.preventDefault();
       parent.document.getElementById('content-frame').src = '';
       parent.document.querySelector('.menu').style.display = 'block';
     });
   </script>
-    
+
 </body>
 
 </html>

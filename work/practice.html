@@ -20,6 +20,21 @@
     <hr class="work-hr" />
     <p>A diagram of a practice</p>
     <hr class="work-hr" />
+
+    <p>
+      <a href="#" id="reset-link">
+        << </a>
+    </p>
+
+  </div>
+
+  <script>
+    document.getElementById('reset-link').addEventListener('click', function (event) {
+      event.preventDefault();
+      parent.document.getElementById('content-frame').src = '';
+      parent.document.querySelector('.menu').style.display = 'block';
+    });
+  </script>
   </div>
 </body>
 

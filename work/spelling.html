@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Spelling</title>
-    <meta name="robots" content="noindex" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
 
-  <body class="body-work">
-    <div class="content-body">
-      <img src="assets/spelling/IMG_2563.jpg" alt="" />
-      <img src="assets/spelling/IMG_2565.jpg" alt="" />
-      <img src="assets/spelling/IMG_2566.jpg" alt="" />
-      <img src="assets/spelling/IMG_2567.jpg" alt="" />
+<head>
+  <meta charset="utf-8" />
+  <title>Spelling</title>
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
 
-      <hr class="work-hr" />
-      <p>Inspired in part by a Venetian love spell</p>
-      <hr class="work-hr" />
-    </div>
-  </body>
+<body class="body-work">
+  <div class="content-body">
+    <img src="assets/spelling/IMG_2563.jpg" alt="" />
+    <img src="assets/spelling/IMG_2565.jpg" alt="" />
+    <img src="assets/spelling/IMG_2566.jpg" alt="" />
+    <img src="assets/spelling/IMG_2567.jpg" alt="" />
+
+    <hr class="work-hr" />
+    <p>Inspired in part by a Venetian love spell</p>
+    <hr class="work-hr" />
+
+    <p>
+      <a href="#" id="reset-link">
+        << </a>
+    </p>
+
+  </div>
+
+  <script>
+    document.getElementById('reset-link').addEventListener('click', function (event) {
+      event.preventDefault();
+      parent.document.getElementById('content-frame').src = '';
+      parent.document.querySelector('.menu').style.display = 'block';
+    });
+  </script>
+  </div>
+</body>
+
 </html>
