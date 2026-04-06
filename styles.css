@@ -18,7 +18,7 @@ body {
 }
 
 /* slight letter-spacing in default state compensates for the
-   narrower italic glyphs on hover, prevents visible shrink */
+   narrower italic glyphs on hover, preventing visible shrink */
 a {
   color: #000;
   text-decoration: none;
@@ -153,11 +153,13 @@ img {
   display: none;
 }
 
-/* single column on mobile, 3-column grid on desktop */
+/* single column on mobile, 3-column grid on desktop.
+   max-height stops portrait images dominating the viewport */
 .content-body img {
   max-width: 100%;
+  max-height: 75vh;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   flex: 1 1 100%;
 }
 
