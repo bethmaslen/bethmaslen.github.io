@@ -3,14 +3,20 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Saturn is so beautiful</title>
+  <title>Saturn is so beautiful - Beth Maslen</title>
+  <!-- hidden from search engines - portfolio is reference only -->
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/x-icon" href="/bm-fav.ico" />
 </head>
 
-<body class="body-work">
-  <div class="content-body">
+<body>
+  <!-- fixed << link at top-left, returns to work list -->
+  <nav class="back-nav"><a href="/work.html">&lt;&lt;</a></nav>
+
+  <!-- scrollable centered column - replicates old iframe layout -->
+  <main class="content-body">
     <img src="assets/saturn-is/0P7A7949.jpg" alt="" />
     <img src="assets/saturn-is/0P7A7950.jpg" alt="" />
     <img src="assets/saturn-is/0P7A7951.jpg" alt="" />
@@ -25,23 +31,7 @@
 
     <hr class="work-hr" />
     <p>Car door handles and slip cast ashtrays</p>
-    <hr class="work-hr" />
-
-    <p>
-      <a href="#" id="reset-link">
-        << </a>
-    </p>
-
-  </div>
-
-  <script>
-    document.getElementById('reset-link').addEventListener('click', function (event) {
-      event.preventDefault();
-      parent.document.getElementById('content-frame').src = '';
-      parent.document.querySelector('.menu').style.display = 'block';
-    });
-  </script>
-  </div>
+  </main>
 </body>
 
 </html>
