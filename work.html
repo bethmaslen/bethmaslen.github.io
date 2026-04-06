@@ -4,101 +4,32 @@
 <head>
   <meta charset="utf-8" />
   <title>Beth Maslen - Work</title>
+  <!-- hidden from search engines - portfolio is reference only -->
   <meta name="robots" content="noindex" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="bm-fav.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/x-icon" href="/bm-fav.ico" />
 </head>
 
 <body>
-  <div class="floating-frame">
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="hamburger-icon" aria-controls="menu" aria-expanded="false">&#8801;</label>
-    <nav class="menu" role="navigation" aria-label="Work Navigation">
-      <ul>
-        <li><a href="bethmaslen.github.io">front</a></li>
-        <li>
-          <a href="work/maternal-figures.html" target="content-frame">Maternal figures</a>
-        </li>
-        <li>
-          <a href="work/making-sure.html" target="content-frame">Making sure</a>
-        </li>
-        <li>
-          <a href="work/500-roses.html" target="content-frame">500 roses in 400 metres</a>
-        </li>
-        <li>
-          <a href="work/moth-lamps.html" target="content-frame">Moth lamps</a>
-        </li>
-        <li><a href="work/two.html" target="content-frame">Two</a></li>
-        <li>
-          <a href="work/practice.html" target="content-frame">Practice</a>
-        </li>
-        <li>
-          <a href="work/spelling.html" target="content-frame">Spelling</a>
-        </li>
-        <li>
-          <a href="work/saturn-is.html" target="content-frame">Saturn is so beautiful</a>
-        </li>
-        <li>
-          <a href="work/i-i-i.html" target="content-frame">I, I, I believe in you</a>
-        </li>
-        <li>
-          <a href="work/come-with.html" target="content-frame">Come with me</a>
-        </li>
-      </ul>
-    </nav>
+  <!-- work list - same floating-frame layout as index.html -->
+  <div class="floating-frame" role="navigation" aria-label="Work Navigation">
+    <a href="/">front</a><br />
+
+    <hr class="menu-hr" />
+
+    <!-- work entries - newest at top -->
+    <a href="/work/maternal-figures.html">Maternal figures</a><br />
+    <a href="/work/making-sure.html">Making sure</a><br />
+    <a href="/work/500-roses.html">500 roses in 400 metres</a><br />
+    <a href="/work/moth-lamps.html">Moth lamps</a><br />
+    <a href="/work/two.html">Two</a><br />
+    <a href="/work/practice.html">Practice</a><br />
+    <a href="/work/spelling.html">Spelling</a><br />
+    <a href="/work/saturn-is.html">Saturn is so beautiful</a><br />
+    <a href="/work/i-i-i.html">I, I, I believe in you</a><br />
+    <a href="/work/come-with.html">Come with me</a><br />
   </div>
-
-  <iframe id="content-frame" name="content-frame" src="" frameborder="0"></iframe>
-  <!-- 
-  -->
-  <script>
-    const menu = document.querySelector(".menu");
-    const hamburgerIcon = document.querySelector(".hamburger-icon");
-    const contentFrame = document.getElementById("content-frame");
-
-    // event listener to all links within the menu
-    menu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.style.display = "none";
-        document.getElementById("menu-toggle").checked = false;
-      });
-    });
-
-    // event listener to the hamburger icon
-    hamburgerIcon.addEventListener("click", () => {
-      // toggle menu visibility
-      menu.style.display = menu.style.display === "none" ? "block" : "none";
-    });
-
-    // event listener to the content frame
-    contentFrame.addEventListener("click", (event) => {
-      event.stopPropagation(); // prevent the click from bubbling up
-    });
-
-
-    function adjustIframePosition() {
-      const maxWidth = 700; // Maximum width of the iframe
-      const windowHeight = window.innerHeight;
-      const windowWidth = window.innerWidth;
-      const frameWidth = Math.min(windowWidth * 0.9, maxWidth); // Calculate width with max limit
-      const frameLeft = (windowWidth - frameWidth) / 2; // Calculate left position to center iframe
-
-      contentFrame.style.width = `${frameWidth}px`; // Set width
-      contentFrame.style.left = `${frameLeft}px`; // Set left position
-      contentFrame.style.height = `${windowHeight * 0.9}px`; // Set height
-    }
-
-    // Add class to body when JavaScript is enabled
-    document.body.classList.add("js-enabled");
-
-    // Event listener for window resize to adjust iframe position
-    window.addEventListener('resize', adjustIframePosition);
-
-    // Initial adjustment when the page loads
-    adjustIframePosition();
-
-  </script>
 </body>
 
 </html>
