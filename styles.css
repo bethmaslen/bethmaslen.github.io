@@ -163,11 +163,6 @@ img {
   flex: 1 1 100%;
 }
 
-@media (min-width: 600px) {
-  .content-body img {
-    flex: 1 1 calc(33.333% - 20px);
-  }
-}
 
 /* ----- work page text ----- */
 
