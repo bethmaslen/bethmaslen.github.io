@@ -177,3 +177,22 @@ iframe {
 .subtext {
   font-size: 0.8rem;
 }
+
+.holding-image {
+  position: fixed;
+  top: 50%;
+  left: calc(50% + 30px);
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.holding-image img {
+  max-width: 70%;
+  max-height: 75vh;
+  object-fit: contain;
+}
